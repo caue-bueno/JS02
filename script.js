@@ -17,7 +17,6 @@ let  students = [  {
 }
 ];
 
-
 function calcAverageGrade (grade1, grade2) {
     return ((grade1 + grade2) / 2).toFixed(1)
 }
