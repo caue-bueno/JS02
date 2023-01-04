@@ -18,23 +18,19 @@ let  students = [  {
 ];
 
 
-
 function calcAverageGrade (grade1, grade2) {
     return ((grade1 + grade2) / 2).toFixed(1)
 }
 
 
+for(let student of students) {
 
-
-for(let i = 0; i < students.length; i++) {
-
-    let averageGrade = calcAverageGrade(students[i].gradeOfTheFirstTest, students[i].gradeOfTheSecondTest);
-    let name = students[i].name
+    let averageGrade = calcAverageGrade(student.gradeOfTheFirstTest, student.gradeOfTheSecondTest);
     if(averageGrade >= 7){
-        alert("A média do(a) aluno(a) " + name +" é: " + averageGrade 
-        +"\nParabéns, "+ name + ("! Você foi aprovado(a) no concurso!"))
+        alert(`A média do(a) aluno(a) ${student.name} é: ${averageGrade}`
+        +`\nParabéns, ${student.name}! Você foi aprovado(a) no concurso!`)
     }else {
-        alert("A média do(a) aluno(a) " + name +" é: " + averageGrade 
-        +"\nNão foi dessa vez, "+ name + ("! Tente novamente!"))
+        alert(`A média do(a) aluno(a) ${student.name} é: ${averageGrade}`
+        +`\nNão foi dessa vez, ${student.name}! Tente novamente!`)
     }
 }
